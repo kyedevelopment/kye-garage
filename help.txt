@@ -1,0 +1,6 @@
+discord.gg/kye
+
+
+Commands (Editable in Config): 
+/garage_permission id -- Give Add Garage Permission 
+/add_garage type -- Basic Garage Creator

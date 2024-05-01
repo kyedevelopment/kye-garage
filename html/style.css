@@ -1,0 +1,617 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./img/bg.png);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swal2-container {
+  z-index: 10000;
+}
+
+.topSide {
+  width: 100%;
+  height: 19%;
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+  justify-content: center;
+}
+
+.label-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 1.3vw;
+  font-size: 3.857vw;
+  text-align: center;
+  background: radial-gradient(
+    101.58% 101.58% at 50% 50%,
+    #00d1ff 0%,
+    #0066ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.label-text span {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.857vw;
+  text-align: center;
+  background: radial-gradient(
+    130.95% 130.95% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.label-dec {
+  position: absolute;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.39vw;
+  width: 32.486vw;
+  margin-top: 6vw;
+  text-align: center;
+  background: radial-gradient(
+    103.79% 103.79% at 50% 50%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.exit-bar {
+  position: absolute;
+  display: flex;
+  float: right;
+  transition: 0.5s;
+  right: 0;
+  margin-top: 1vw;
+  width: 6.51vw;
+  height: 2.73vw;
+}
+
+.exit-img {
+  width: 2.3vw;
+  height: 2.3vw;
+  margin-top: 0.15vw;
+  margin-right: 0.2vw;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    126.83% 126.83% at 50% 50%,
+    #cd2828 0%,
+    rgba(205, 40, 40, 0) 100%
+  );
+  border-radius: 0.22321419270833334vw;
+}
+
+.fa-xmark {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 1.5vw;
+}
+
+.exit-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5625vw;
+  width: 3vw;
+  line-height: 2.5390625vw;
+  margin-left: -0.5vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.center-side {
+  width: 100%;
+  height: 81%;
+  display: flex;
+  justify-content: center;
+}
+
+*:focus {
+  outline: none;
+}
+
+input {
+  position: absolute;
+  width: 41vw;
+  height: 4.73vw;
+  margin-top: 1vw;
+  background: radial-gradient(
+      242.39% 242.39% at 50.05% 0%,
+      rgba(41, 140, 255, 0.042) 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(41, 140, 255, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.3);
+  border: 0.1564vw solid;
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(9, 9, 121, 0) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  border-image-slice: 1;
+  border-radius: 0.32vw;
+  overflow: visible;
+  font-family: "Oswald", "FontAwesome";
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2.08vw;
+  color: rgba(255, 255, 255, 0.69);
+}
+
+.center-all {
+  width: 64%;
+  margin-left: 7.7vw;
+  height: 81%;
+  margin-top: 7.5vw;
+}
+
+.center-right {
+  float: right;
+  height: 102.5%;
+  width: 8%;
+}
+
+.center-left {
+  float: left;
+  height: 102.5%;
+  width: 89%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  width: 5.316vw;
+  margin-top: 1.5vw;
+  float: right;
+  border: 0.1564vw solid;
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(9, 9, 121, 0) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  border-image-slice: 1;
+  height: 6.25vw;
+  background: radial-gradient(
+      242.39% 242.39% at 50.05% 0%,
+      rgba(41, 140, 255, 0.042) 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(41, 140, 255, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.3);
+  border-radius: 0.41vw;
+}
+
+.total-cars {
+  margin-top: 0vw;
+}
+
+.garage-name {
+  width: 5.31vw;
+  height: 14.689vw;
+  background: radial-gradient(
+      242.39% 242.39% at 50.05% 0%,
+      rgba(41, 140, 255, 0.042) 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(41, 140, 255, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.3);
+  border-radius: 0.41vw;
+}
+
+.cars:nth-child(1) {
+  margin-top: 0vw;
+}
+
+.cars {
+  width: 100%;
+  height: 11.95vw;
+  margin-top: 1.7vw;
+  transition: 0.5s;
+  border: 0.1964vw solid;
+  background: radial-gradient(
+      242.39% 242.39% at 50.05% 0%,
+      rgba(41, 140, 255, 0.042) 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(41, 140, 255, 0) 100%
+    ),
+    rgba(0, 0, 0, 0.3);
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(9, 9, 121, 0) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  border-image-slice: 1;
+  border-radius: 0.41vw;
+}
+
+.car-img {
+  float: right;
+  margin-right: 2.5vw;
+  width: 23.5vw;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./img/blista.png");
+}
+
+.car-details {
+  float: right;
+  height: 100%;
+  width: 14vw;
+  margin-right: 0.5vw;
+}
+.car-info {
+  float: right;
+  height: 100%;
+  width: 15vw;
+  margin-right: 0.5vw;
+}
+
+.car-status {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.1vw;
+  margin-top: 0.5vw;
+  margin-left: 0.2vw;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.car-name {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4.25vw;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 6vw;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.car-plate {
+  width: 8.45vw;
+  height: 1.92vw;
+  background: #0689e8;
+  border-radius: 0.222vw;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.33vw;
+  line-height: 1.62vw;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.car-bar {
+  height: 22.8%;
+  width: 100%;
+  margin-top: 3.85vw;
+}
+
+.car-bar:nth-child(2) {
+  margin-top: 0.6vw;
+}
+
+.car-bar-icon {
+  width: 2.62vw;
+  height: 2.62vw;
+  background: #0689e8;
+  border-radius: 0.38vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 1.15vw;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.car-baro {
+  width: 10.74vw;
+  height: 0.39vw;
+  margin-top: 0.05vw;
+  margin-left: 2.95vw;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 0.97vw;
+}
+
+.car-baro-full {
+  width: 50%;
+  height: 100%;
+  background: #0689e8;
+  border-radius: 0.97vw;
+}
+
+.car-text {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  margin-top: -2.4vw;
+  margin-left: 3vw;
+  font-size: 1.1vw;
+  color: #ffffff;
+}
+
+.fa-warehouse {
+  font-size: 2.3vw;
+  margin-top: 1vw;
+}
+
+.garage-text {
+  position: absolute;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.65vw;
+  margin-top: 3.5vw;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.garage-cars {
+  position: absolute;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 4.18vw;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.vector {
+  position: absolute;
+  background-image: url("./img/Vector.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 4vw;
+  height: 1.4vw;
+  margin-top: 1vw;
+}
+
+.vector2 {
+  position: absolute;
+  background-image: url("./img/Vector.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 4vw;
+  height: 1.4vw;
+  margin-top: 11.8vw;
+}
+
+.garage-texts {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vw;
+  letter-spacing: 0.15em;
+  color: #ffffffb7;
+  margin-top: 3.14vw;
+  writing-mode: vertical-rl;
+}
+
+.alert {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      242.39% 242.39% at 50.05% 0%,
+      rgba(41, 140, 255, 0.116) 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(41, 140, 255, 0.088) 100%
+    ),
+    rgba(0, 0, 0, 0.63);
+  border-radius: 0.3646vw;
+}
+
+.alert-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875vw;
+  padding-top: 1.5625vw;
+  padding-left: 3.0208vw;
+  padding-right: 3.0208vw;
+  width: 45.625vw;
+  height: 16.1458vw;
+  background: radial-gradient(
+      242.39% 242.39% at 50.05% 0%,
+      rgba(41, 140, 255, 0.116) 0%,
+      rgba(0, 0, 0, 0) 100%,
+      rgba(41, 140, 255, 0.088) 100%
+    ),
+    rgba(0, 0, 0, 0.63);
+  border-radius: 0.3646vw;
+  border: 0.1564vw solid;
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(9, 9, 121, 0) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  border-image-slice: 1;
+}
+
+.alert-sure {
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald";
+  font-style: normal;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.5vw;
+  line-height: 3.6979vw;
+  color: #ffffff;
+}
+
+.alert-sure p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.6667vw;
+  line-height: 2.4479vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.alert-buttons {
+  display: flex;
+  width: 100%;
+  height: 18.2813vw;
+  gap: 2.9688vw;
+}
+
+.alert-cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18.2813vw;
+  height: 4.2708vw;
+  transition: 0.5s;
+  background: radial-gradient(
+    118.95% 121.8% at 0% 50%,
+    rgba(255, 93, 93, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%,
+    rgba(255, 93, 93, 0) 100%
+  );
+  border-radius: 0.3646vw;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4583vw;
+  line-height: 1.7708vw;
+  border: 0.1564vw solid;
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(9, 9, 121, 0) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  border-image-slice: 1;
+  border-radius: 0.2vw;
+  color: rgba(255, 255, 255, 0.51);
+}
+
+.alert-accept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18.2813vw;
+  height: 4.2708vw;
+  transition: 0.5s;
+  background: radial-gradient(
+    100.71% 114.58% at 100% 50%,
+    rgba(93, 255, 177, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%,
+    rgba(93, 255, 177, 0) 100%
+  );
+  border-radius: 0.3646vw;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4583vw;
+  line-height: 1.7708vw;
+  border: 0.1564vw solid;
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(9, 9, 121, 0) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  border-image-slice: 1;
+  border-radius: 0.2vw;
+  color: rgba(255, 255, 255, 0.51);
+}
+
+.cars:hover {
+  cursor: pointer;
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.064) 0%,
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.116) 100%
+  );
+}
+
+.exit-bar:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.alert-cancel:hover {
+  background: radial-gradient(
+    118.95% 121.8% at 0% 50%,
+    rgba(255, 93, 93, 0.616) 0%,
+    rgba(0, 0, 0, 0.281) 100%,
+    rgba(255, 93, 93, 0.226) 100%
+  );
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  cursor: pointer;
+}
+
+.alert-accept:hover {
+  background: radial-gradient(
+    100.71% 114.58% at 100% 50%,
+    rgba(93, 255, 177, 0.616) 0%,
+    rgba(0, 0, 0, 0.048) 100%,
+    rgba(93, 255, 177, 0) 100%
+  );
+  border-image-source: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.34) 100%
+  );
+  cursor: pointer;
+}
